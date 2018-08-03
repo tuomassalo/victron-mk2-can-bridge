@@ -1,8 +1,8 @@
 # victron-mk2-can-bridge
-Use a RPi to read Victron inverter data via mk2usb and write it to CAN bus via usbtin.
 
-Installation
-============
+With this project, one can use a Rasberry Pi, [USBtin](https://www.fischl.de/usbtin/) and a MK2-USB adapter (Victron ASS030130000) to convert metrics from a Victron MultiPlus inverter to (custom) CAN bus messages.
+
+## Installation
 
 - install `flash` from https://github.com/hypriot/flash
 
