@@ -1,0 +1,23 @@
+#cloud-config
+
+hostname: bridge
+manage_etc_hosts: true
+
+users:
+  - name: bridge
+    gecos: "Bridge User"
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    groups: users,docker,video
+    plain_text_passwd: bridge
+    lock_passwd: false
+    ssh_pwauth: true
+    chpasswd: { expire: false }
+
+# On first boot
+# First fix the time to make https work
+runcmd:
+  - '/etc/init.d/ntp stop'
+  - 'ntpd -gq'
+  - '/etc/init.d/ntp start'
+  - 'curl https://raw.githubusercontent.com/tuomassalo/victron-mk2-can-bridge/master/install.sh | sh -x'

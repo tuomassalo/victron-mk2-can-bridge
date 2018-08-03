@@ -1,0 +1,5 @@
+[FORMAT]
+indent-string='  '
+
+[MESSAGES CONTROL]
+disable=invalid-name, missing-docstring
