@@ -2,6 +2,9 @@
 
 # This is run OUTSIDE of the container
 
+# An attempt to minimize loss on power outage
+sync
+
 Logfile="/var/log/bridge.log"
 Status=$(
   tail -c 20000 $Logfile |
