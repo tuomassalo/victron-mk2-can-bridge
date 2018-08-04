@@ -15,7 +15,7 @@ RUN apt-get -y install git nano jed
 RUN cd /tmp
 
 RUN git clone https://github.com/tuomassalo/ib.victron   && cd ib.victron && python setup.py install
-RUN git clone https://github.com/fishpepper/pyUSBtin.git && cd pyUSBtin   && python setup.py install
+RUN git clone https://github.com/fishpepper/pyUSBtin.git && cd pyUSBtin   && git checkout 097a3247382bc7af90d42f3668511bdff9905219 && python setup.py install
 
 # RUN pip install pyserial
 
