@@ -6,9 +6,9 @@ cd /opt/host-scripts
 
 mkdir -p /opt/shared-dir
 
-docker ps|perl -wlane 'print "docker rm -f $F[0]" unless /^CONTAINER.ID/' | sh > /dev/null
+docker rm -f $(docker ps -a -q) || /bin/true
 
-docker build -t tuomassalo/rpi-python-victron . &&
+docker build -t tuomassalo/rpi-python-victron .
 docker run \
 	--device=/dev/ttyUSB0 \
 	--device=/dev/ttyACM0 \
