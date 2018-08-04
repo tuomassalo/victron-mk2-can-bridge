@@ -8,7 +8,7 @@ import pickle
 from struct import pack
 from serial import Serial
 
-STATEFILE = '/opt/victron-dir/state.pck'
+STATEFILE = '/opt/shared-dir/state.pck'
 MOCK = (sys.platform == 'darwin')
 
 if MOCK:

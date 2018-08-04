@@ -20,8 +20,8 @@ RUN git clone https://github.com/fishpepper/pyUSBtin.git && cd pyUSBtin   && pyt
 # RUN pip install pyserial
 
 # *.py and forever.sh
-COPY bridge-scripts /opt/shared-dir/
+# COPY bridge-scripts /opt/shared-dir/
 
-RUN chmod a+x /opt/shared-dir/forever.sh
+# RUN chmod a+x /opt/shared-dir/forever.sh
 
 RUN /bin/bash
