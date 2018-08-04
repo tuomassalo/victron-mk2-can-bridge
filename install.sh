@@ -5,7 +5,7 @@ set -e
 
 apt-get update
 apt-get -y upgrade
-apt-get install libjson-perl
+apt-get -y install libjson-perl
 
 cd /tmp/
 
