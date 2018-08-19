@@ -1,3 +1,6 @@
 # Check that the bridge is running, [re]start docker if not.
 
-* * * * * root /opt/host-scripts/docker-watchdog.sh
+* * * * * root /opt/host-scripts/docker-watchdog.sh >> /var/log/bridge-cron.log
+
+# Reboot at 00:01
+01 00 * * * root /sbin/reboot
