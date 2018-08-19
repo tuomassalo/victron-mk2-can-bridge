@@ -158,7 +158,7 @@ def init_bridge():
   try:
     age = time.time() - os.stat(STATEFILE).st_mtime
     print("RESTORE file age: %d seconds" % int(age))
-    if -600 < age < 600: # 10 minutes
+    if -3600 < age < 3600: # use old state file, if not more than one hour old
       try:
         print("... RESTORING")
         f = open(STATEFILE)

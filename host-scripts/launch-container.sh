@@ -5,7 +5,7 @@ set -e
 SharedDir=/opt/shared-dir
 cd /opt/host-scripts
 
-rm -rf $SharedDir
+rm -rf $SharedDir/bridge-scripts
 cp -r bridge-scripts $SharedDir
 
 docker rm -f $(docker ps -a -q) || /bin/true
